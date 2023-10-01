@@ -5,7 +5,7 @@ We have developed a desktop application that interfaces with Facebook’s API. T
 incorporating a variety of classical use cases that mimic standard usage on the site, with additional features to enhance the overall user experience.
 The system presents smooth user experiences even in cases of authentication failure or missing user information through the usage of Try/Catch/Finally methodology and Mock Data.
 
-- **System Functionality:
+- **System Functionality**:
 The system is divided into several tabs, each serving a different purpose.
 
 
@@ -16,8 +16,8 @@ The system is divided into several tabs, each serving a different purpose.
 4. [Technologies Used](#-technologies-used)
 
 
-# Features Section
-## 1. Core Features:
+## 🛠 Features
+
 - **Picture Feature:**
    - Allows users to transform their profile pictures into cartoonish versions ("Toonified").
 -  **Guessing Game:**
@@ -36,7 +36,8 @@ The system is divided into several tabs, each serving a different purpose.
    -  Contains auxiliary files intended to improve user experience.
    
 
-# Usage
+## 🛠 <span style="color:green">Usage</span>
+
 
 - **Picture Feature:**
    - Integration and Usage: Incorporated using NuGet and the .NET framework via Visual Studio’s Package Manager Console. The system manages temporary saving and processing of user images, providing side-by-side comparison between the original and the ‘toonified’ image.
@@ -56,7 +57,8 @@ The system is divided into several tabs, each serving a different purpose.
 -  **Resources Folder:**
    - Content Usage: Contains auxiliary files such as audio files, images, and a database for an incorporated game, the Guessing Game.
 
-## User Experience:
+### 🖌 <span style="color:red">User Experience</span>
+
 The application, with its carefully integrated features, aims to provide a customizable, engaging, and user-centric experience, standing out as an innovative platform.
  - **Advanced Methodologies:** The application employs advanced methodologies and ensures smooth functionality and optimal user experience.
    - **Data Binding:** Employed to simplify data presentation and allow separation between the logic layer and the UI layer.
@@ -64,7 +66,8 @@ The application, with its carefully integrated features, aims to provide a custo
    - **Interactive and User-friendly:** Offers an interactive and enjoyable experience while maintaining user-friendliness.
 
 
-# Design Patterns: 
+## 🧩 <span style="color:purple">Design Patterns</span>
+
    1. Singleton
    2. Façade
    3. Static Factory Class
@@ -73,7 +76,7 @@ The application, with its carefully integrated features, aims to provide a custo
    6. Strategy
    7. Command
 
-## Design Pattern No. 1 – Singleton
+### Design Pattern No. 1 – Singleton
 
 ### Reason for Using the Pattern:
 The Singleton pattern is used to ensure that a class has only one instance and provides a global point of access to it. It was chosen to maintain a single, globally accessible instance of `GameResults` to store the game results of the current session. This instance is accessed by three different classes: `FormMain`, `LeaderBoardFacade`, and `FormLeaderBoard`, each having different responsibilities. Using Singleton ensures synchronized access to game results, improving runtime efficiency by avoiding redundant object creation and ensuring data consistency across different classes and threads.
