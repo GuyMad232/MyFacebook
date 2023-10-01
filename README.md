@@ -4,16 +4,20 @@
 We have developed a desktop application that interfaces with Facebook’s API. The application is designed to offer the user an experience similar to that on Facebook’s official site,
 incorporating a variety of classical use cases that mimic standard usage on the site, with additional features to enhance the overall user experience.
 The system presents smooth user experiences even in cases of authentication failure or missing user information through the usage of Try/Catch/Finally methodology and Mock Data.
+![App Demo](FacebookGIF.gif)
 
 - **System Functionality**:
 The system is divided into several tabs, each serving a different purpose.
+![App Class Diagram](AppClassDiagram.jpg)
+
+![Use Case Diagram](UseCase.jpg)
 
 
 ## 🌐 Table of Contents
-1. [Features](#-features)
-2. [Usage](#-usage)
+1. [Features](#-Features)
+2. [Usage](#-Usage)
 3. [Design Patterns Used](#-Design-Patterns)
-4. [Technologies Used](#-technologies-used)
+4. [Technologies Used](#-Technologies-used)
 
 
 ## 🛠 Features
@@ -66,7 +70,7 @@ The application, with its carefully integrated features, aims to provide a custo
    - **Interactive and User-friendly:** Offers an interactive and enjoyable experience while maintaining user-friendliness.
 
 
-## 🧩 <span style="color:purple">Design Patterns</span>
+## 🧩 Design-Patterns
 
    1. Singleton
    2. Façade
@@ -93,7 +97,9 @@ The Singleton pattern prevents multiple creations of `GameResults` and ensures a
    - Functions like `GetGameResultsLoses`, `GetGameResultsWins`, and `UpdateGameResults` facilitate access and modification of game results.
 - **Fields:**
    - Fields like `s_GameResults`, `m_Loses`, `m_Wins`, and `sr_GameResultsLock` are added to store and manage the game results effectively.
- 
+   - 
+ ![Singleton Class Diagram](Singleton.jpg)
+
 ## Design Pattern No. 2 – Façade
 
 ### Reason for Using the Pattern:
@@ -109,7 +115,7 @@ The Façade pattern offers a simplified, unified interface (`LeaderBoardFacade`)
    - Various functions handle specific computational and database management tasks.
 - **UI Logic:**
    - The `FormLeaderBoard` class focuses mainly on UI interactions and leverages logic located in the façade to keep UI class coherent.
-
+ ![Facade Class Diagram](Facade.jpg)
 
  ## Design Pattern No. 3 – Static Factory Class
 
@@ -126,6 +132,10 @@ It provides a unified and simplified method to create different `Form` objects, 
    - The factory function can safely parse the requested `Form` type from a string, allowing dynamic `Form` creation.
 - **Type Handling & Error Management:**
    - The created objects are returned as type `Form`, allowing the Client side to cast to the relevant `Form` using "as".
+ 
+ ![Static Factory Class Diagram](StaticFactory.jpg)
+
+ 
  ## Design Pattern No. 4 – Iterator
 
 ### Reason for Using the Pattern:
@@ -139,10 +149,11 @@ It allows the `GuessingGame` class to access information conveniently without co
    - A `FamousPerson` class holds the details of each famous person, and `EnumerableFamousPersons` class enables iteration.
 - **Efficient Iteration:**
    - Uses yield return methodology for efficient iteration and performance improvement, encapsulated within a using clause to ensure proper disposal of the iterator.
+   - 
+ ![Iterator Class Diagram](Iterator.jpg)
 
 
-
-## Design Pattern No. 5 – Observer
+## Design Pattern No. 5 – Observer, Command
 
 ### Reason for Using the Pattern:
 The Observer pattern was chosen to facilitate dynamic updating of controls in response to user-preferred “Dark-Mode” settings. It maintains class independency and allows seamless notification of state changes in the `DarkMode` class to subscribed classes, enhancing extendability and flexibility of the application.
@@ -159,7 +170,7 @@ This pattern enables all subscribed observers to be notified about state changes
    - `notifyClickObservers` method employs null checks and invoke to notify existing subscribers safely.
 - **Independent Action:**
    - Each observer acts independently in response to notifications, performing actions defined within their scope.
-
+![Observer Class Diagram](Observer.jpg)
 
 ## Design Pattern No. 6 – Strategy
 
@@ -178,6 +189,9 @@ This pattern encapsulates different filtering logics within separate classes, ea
    - This instance is passed to the `fetchFilteredPosts` method to display posts according to the chosen strategy.
 - **Utilizing LINQ:**
    - `MoreThanTenLikesFilter` and `LastMonthFilter` implement the `Select` function using LINQ for improved performance, readability, and maintainability.
+![Strategy Class Diagram](Strategy.jpg)
+
+
 
 
 
